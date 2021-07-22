@@ -3,7 +3,7 @@
   ansible.builtin.apt:
     update_cache: yes
     package:
-      - python-pip3
+      - python3-pip
     state: present
   tags:
     - pythonpkgs
@@ -13,3 +13,5 @@
     state: present
     name: "{{ pypi_modules }}"
     umask: 0022
+  tags:
+    - pythonpkgs
