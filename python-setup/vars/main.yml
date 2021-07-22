@@ -1,7 +1,7 @@
 ---
 pypi_modules:
   - boto3
-  - jmesapath
+  - jmespath
   - PyYAML
   - awscli
   # pytest

@@ -8,10 +8,18 @@
   tags:
     - pythonpkgs
 
+- name: upgrade pip itself
+  ansible.builtin.pip:
+    state: latest
+    name: pip
+    umask: '0022'
+  tags:
+    - pythonpkgs
+
 - name: add python3 packages
   ansible.builtin.pip:
-    state: present
+    state: latest
     name: "{{ pypi_modules }}"
-    umask: 0022
+    umask: '0022'
   tags:
     - pythonpkgs
